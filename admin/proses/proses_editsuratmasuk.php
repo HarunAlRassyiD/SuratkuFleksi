@@ -56,13 +56,14 @@
                         tanggal_disposisi2          = '$tgl_disp2',
                         disposisi3                  = '$disposisi3',
                         tanggal_disposisi3          = '$tgl_disp3',
-						disp_lanjut          		= '$disp_lanjut'
+						disp_lanjut          		= '$disp_lanjut',
+						file_suratmasuk          	= '$nama_b'
 						where id_suratmasuk = $id";
 				
 		$execute = mysqli_query($db, $sql);			
 						
-		echo "<script>alert('Data berhasil di Edit');history.go(-1);</script>";
-	}	
+		echo "<Center><h2><br>Data Surat masuk telah diubah</h2></center>
+		<meta http-equiv='refresh' content='2;url=../detail-suratmasuk.php?id_suratmasuk=".$id."'>";}	
 	else{
 		
         $tipe_file 		= $_FILES['file_suratmasuk']['type'];
@@ -102,8 +103,8 @@
 				
 			$execute = mysqli_query($db, $sql);			
 		
-			echo "<script>alert('Data berhasil di Edit');history.go(-1);</script>";			
-			}
+			echo "<Center><h2><br>Data Surat masuk telah diubah</h2></center>
+			<meta http-equiv='refresh' content='2;url=../detail-suratmasuk.php?id_suratmasuk=".$id."'>";}
 			else{
 			echo "<script>alert('File yang anda masukkan tidak sesuai ketentuan Silahkan Ulangi');history.go(-1);</script>";
 				

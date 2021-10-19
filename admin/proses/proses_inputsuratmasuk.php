@@ -50,7 +50,8 @@
 								  values ('$nomorurut_suratmasuk ', '$kode_suratmasuk','$nomor_suratmasuk', '$tgl_surat', '$perihal_suratmasuk', '$operator', '$nomor_suratbalasan', '$tgl_suratbalasan', '$perihal_suratbalasan',  '$disposisi1 ', '$tgl_disp1', '$disposisi2', '$tgl_disp2 ', '$disposisi3 ', '$tgl_disp3 ', '$disp_lanjut', '$status_suratmasuk',  '$pengiriman_suratbalasan', '$nama_penerima_suratbalasan','$nama_baru','$tanggal_entry')";
 		$execute = mysqli_query($db, $sql);
 		
-		echo "<script>alert('Surat masuk Berhasil Dimasukkan');history.go(-2);</script>";
+		echo "<Center><h2><br>Terima Kasih<br>Surat masuk Telah Dimasukkan</h2></center>
+			<meta http-equiv='refresh' content='2;url=../datasuratmasuk.php'>";
 	}
 	else{
 		echo "<script>alert('Silahkan isi semua kolom lalu tekan submit, Terima Kasih');history.go(-1);</script>";
